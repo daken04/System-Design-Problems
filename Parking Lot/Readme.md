@@ -6,7 +6,7 @@
 ## Next we will make our Parking lot related stuff
 1. parking_spot: which has info of whether the parking spot is empty or not, if not then what vehicle is there
 2. level: it will check for each spot in the level manage those spots
-3. parking_lot: manage each level, function like add_level, park, unpark
+3. parking_lot: manage each level, function like add_level, park, unpark (This is singleton class)
 
 
 Key Learning Points:
