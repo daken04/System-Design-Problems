@@ -22,23 +22,21 @@ public:
 
 class ToyFactory{
 public:
-    Toy& createToy(string type){ // return either the reference or pointer if returning datatype is the interface
+    Toy* createToy(string type){ // return either the reference or pointer if returning datatype is the interface
         if(type=="Car"){
-            Car c;
-            return c;
+            return new Car();
         }
         else{
-            Doll d;
-            return d;
+            return new Doll();
         }
     }
 };
 
 int main(){
     ToyFactory f;
-    Toy& toy1 = f.createToy("Car");
-    toy1.package();
+    Toy* toy1 = f.createToy("Car");
+    toy1->package();
 
-    Toy& toy2 = f.createToy("Doll");
-    toy2.package();
+    Toy* toy2 = f.createToy("Doll");
+    toy2->package();
 }
