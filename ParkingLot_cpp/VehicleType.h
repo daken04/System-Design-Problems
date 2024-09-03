@@ -1,10 +1,10 @@
 #ifndef VEHICLETYPE_H
 #define VEHICLETYPE_H
 
-enum class VehicleType {
+enum class VehicleType{
     CAR,
     MOTORCYCLE,
     TRUCK
 };
 
-#endif // VEHICLETYPE_H
+#endif
