@@ -13,11 +13,19 @@ private:
 
     ParkingLot(){}
 
+    // Delete copy constructor
+    ParkingLot(const ParkingLot&) = delete;
+
+    // Delete copy assignment operator
+    ParkingLot& operator=(const ParkingLot&) = delete;
+
 public:
     static ParkingLot* getinstance(){
+        lock_guard<mutex> lock(mtx);
         if(instance==NULL){
-            lock_guard<mutex> lock(mtx);
-            return new ParkingLot();
+            cout<<"created"<<endl;
+            instance = new ParkingLot();;
+            return instance;
         }
         return instance;
     }

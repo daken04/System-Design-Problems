@@ -2,7 +2,7 @@
 #define LEVEL_H
 
 #include<bits/stdc++.h>
-#include "parkingspot.h"
+#include "ParkingSpot.h"
 #include "VehicleType.h"
 using namespace std;
 
